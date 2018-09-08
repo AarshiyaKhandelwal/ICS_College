@@ -80,3 +80,51 @@ int arePrimePairs(vector<int> m, int n)
     }
     return 1;
 }
+
+/*
+OUTPUT
+
+------------------------------------------------------
+	CHINESE REMAINDER THEOREM
+------------------------------------------------------
+
+
+	Enter the number of conguences: 4
+
+	Enter remainder and modulus for: 
+	1) 2 3
+	2) 3 7
+	3) 0 2
+	4) 0 5
+------------------------------------------------------
+	80 satisfies all the given congruences!
+
+------------------------------------------------------
+	CHINESE REMAINDER THEOREM
+------------------------------------------------------
+
+
+	Enter the number of conguences: 3
+
+	Enter remainder and modulus for: 
+	1) 1 3
+	2) 4 5
+	3) 6 7
+------------------------------------------------------
+	34 satisfies all the given congruences!
+
+------------------------------------------------------
+	CHINESE REMAINDER THEOREM
+------------------------------------------------------
+
+
+	Enter the number of congruences: 3
+
+	Enter remainder and modulus for: 
+	1) 1 3
+	2) 4 6
+	3) 6 7
+
+	All the moduli are not relatively prime pairs.
+	Cannot run CRT!
+*/
