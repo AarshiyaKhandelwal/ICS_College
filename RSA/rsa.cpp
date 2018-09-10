@@ -26,7 +26,8 @@ int main(void)
    flag = prime(x);
    while(flag == 0)
    {
-      cout <<"\n\t" << x << " IS NOT A PRIME NUMBER!\n\tRE-ENTER FIRST PRIME NUMBER: ";
+      cout <<"\n\t" << x << " IS NOT A PRIME NUMBER!;
+      cout << "\n\tRE-ENTER FIRST PRIME NUMBER: ";
       cin >> x;
       flag = prime(x);
    }
