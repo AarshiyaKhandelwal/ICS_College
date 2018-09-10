@@ -15,7 +15,7 @@ long int cd(long int);
 void encrypt();
 void decrypt();
 
-int main()
+int main(void)
 {
    cout << "----------------------------------------------------";
    cout << "\n\tRSA ENCRYPTION\n";
