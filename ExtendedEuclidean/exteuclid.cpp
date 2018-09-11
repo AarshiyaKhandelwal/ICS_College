@@ -4,51 +4,65 @@
  *  Created on: 10-Sep-2018
  *      Author: Aarshiya
  */
-#include <iostream>
+#include<iostream>
 using namespace std;
-
-int gcdExtended(int a, int b, int x, int y)
+int main()
 {
-    if (a == 0)
-    {
-        x = 0;
-        y = 1;
-        return b;
-    }
-    int x1=1, y1=1;
-    int gcd = gcdExtended(b%a, a, x1, y1);
-
-    x = y1 - (b/a) * x1;
-    y = x1;
-
-    return gcd;
-}
-
-int main(void)
-{
-
-    int x=1, y=1;
-    int a = 0, b = 0;
-    int g = 0;
-
-    cout << "\n-------------------------------------------------";
-    cout << "\n\tEXTENDED EUCLIDEAN THEOREM\n";
-    cout << "-------------------------------------------------\n";
-    cout << "\n\tEnter two numbers to find their GCD:\n\t";
-    cin >> a >> b;
-    g = gcdExtended(a, b, x, y);
-    cout << "\n\tgcd("<< a << ", " << b << ") = " << g;
-    return 0;
+	int q,n1,n2,r,t1,t2,t;
+	t1=0;
+	t2=1;
+	cout << "\n\t----------------------------\n";
+	cout << "\tEXTENDED ECUCLIDEAN THM";
+	cout << "\n\t----------------------------\n";
+	cout<<"\n\tEnter the first number(n1): ";
+	cin>>n1;
+	cout<<"\n\tEnter the second number(n2): ";
+	cin>>n2;
+	int a=n1;
+	int b=n2;
+    	cout<<"\n\tq n1 n2 r t1 t2 t";
+    	cout<<"\n\t_________________"<<endl;
+	while(n1!=1 && n2!=0)
+	{
+		q=n1/n2;
+		r=n1%n2;
+		t=t1-q*t2;
+		cout<<"\t"<<q<<" "<<n1<<" "<<n2<<" "<<r<<" "<<t1<<" "<<t2<<" "<<t<<endl;
+		n1=n2;
+		n2=r;
+		t1=t2;
+		t2=t;
+	}
+	cout<<"\t-----------------"<<endl;
+	//cout << t1;
+	cout << "\n\tgcd(" << a << ", " << b << ") = ";
+	if(t1<0)
+	{
+		cout<<(t1+a);
+	}
+	else
+	{
+		cout<<t1;
+	}
+	return 0;
 }
 
 /*
 OUTPUT-
--------------------------------------------------
-	EXTENDED EUCLIDEAN THEOREM
--------------------------------------------------
+	----------------------------
+	EXTENDED ECUCLIDEAN THM
+	----------------------------
 
-	Enter two numbers to find their GCD:
-	100 101
+	Enter the first number(n1): 26
 
-	gcd(100, 101) = 1
+	Enter the second number(n2): 11
+
+	q n1 n2 r t1 t2 t
+	_________________
+	2 26 11 4 0 1 -2
+	2 11 4 3 1 -2 5
+	1 4 3 1 -2 5 -7
+	3 3 1 0 5 -7 26
+	-----------------
+	gcd(26, 11) = 19
 */
