@@ -35,7 +35,7 @@ public class Sha_main {
 		}
 	}
 }
-
+/*
 OUTPUT 
 
 	-----------SHA1 IN JAVA-----------
@@ -45,3 +45,4 @@ khandelwal
 
 	Hashed string: 
 2b83d698b4849e930fffabcf8208121028dac
+*/
